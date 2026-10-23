@@ -1,0 +1,255 @@
+
+
+% ---------------- Section 1 : Introduction ----------------
+\section{Introduction (1 page maximum)}
+
+% Instructions à l'étudiant :
+% - Présenter le contexte général du projet
+% - Décrire brièvement le problème ou le besoin à résoudre
+% - Expliquer les objectifs et la motivation du projet
+% - La section doit être concise (1 page max)
+% Exemple :
+Le projet vise à concevoir et réaliser un système embarqué permettant de surveiller et contrôler [préciser le domaine]. Cette section doit donner un aperçu global et préparer le lecteur aux sections suivantes.
+
+% ---------------- Section 2 : Matériaux et méthodes utilisés ----------------
+\section{Matériaux et méthodes utilisés (5 pages)}
+
+% ---------------------------------------------------------
+% Instructions générales :
+% - Cette section doit être structurée en paragraphes clairs.
+% - Inclure : 
+%    1) État de l'art / Théorie
+%    2) Présentation des composants matériels
+%    3) Méthodes et protocoles utilisés
+% - Limite : environ 5 pages
+% ---------------------------------------------------------
+
+\subsection{État de l'art et théorie}
+
+% Instructions à l'étudiant :
+% - Présenter les concepts théoriques nécessaires à la compréhension du projet
+% - Faire référence aux travaux existants (citations)
+% - Cette partie introduit le lecteur à la problématique et aux technologies utilisées
+
+Par exemple, pour un système de surveillance embarqué, vous pouvez présenter les notions de capteurs, microcontrôleurs et protocoles de communication. Il est également recommandé de citer les travaux antérieurs ou des articles scientifiques pertinents \cite{floyd2007electronics}.
+
+Les performances d’un système peuvent être évaluées par le rapport signal sur bruit :
+
+\begin{equation}
+	SNR = 10 \log_{10} \left(\frac{P_s}{P_n}\right)
+	\label{eq:snr}
+\end{equation}
+
+\subsection{Présentation des composants matériels}
+
+% Instructions à l'étudiant :
+% - Décrire les composants principaux du projet (cartes électroniques, capteurs, actionneurs, etc.)
+% - Inclure des figures ou schémas pour illustrer chaque composant
+% - Justifier le choix de chaque composant en fonction des objectifs du projet
+
+Exemple : le système utilise une carte ESP32 pour la collecte des données et la communication sans fil. Des capteurs de température et d'humidité sont intégrés pour mesurer les paramètres environnementaux. La figure~\ref{fig:système} illustre les composants principaux du système.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{image1}
+	\caption{Architecture du système}
+	\label{fig:système}
+\end{figure}
+
+\subsection{Méthodes et protocoles}
+
+% Instructions à l'étudiant :
+% - Décrire les méthodes expérimentales ou de conception utilisées
+% - Expliquer les étapes suivies pour réaliser le projet
+% - Indiquer les outils logiciels et les procédures de test
+
+Par exemple, le programme sur la carte ESP32 est développé avec l'IDE Arduino. Les tests sont réalisés en simulant différents scénarios pour valider la collecte des données et la communication. Les protocoles de communication utilisés sont décrits ci-dessous, ainsi que les paramètres expérimentaux choisis pour chaque test.
+
+\section{Conception (5 pages)}
+
+% Instructions à l'étudiant :
+% - Décrire la conception globale du système étape par étape
+% - Inclure schémas, diagrammes et figures explicatives
+% - Décrire les algorithmes ou logigrammes utilisés
+% - Limite : environ 5 pages
+
+\subsection{Architecture générale}
+
+% Instructions : présenter le système global
+Décrire l'architecture matérielle et logicielle. Par exemple, le système peut être divisé en modules : acquisition de données, traitement, communication et interface utilisateur. La figure~\ref{fig:architecture} illustre l'architecture globale.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{image1}
+	\caption{Architecture générale du système}
+	\label{fig:architecture}
+\end{figure}
+
+\subsection{Diagrammes et algorithmes}
+
+% Instructions : présenter les diagrammes et algorithmes
+Inclure les diagrammes de flux, logigrammes pour expliquer les processus principaux. 
+
+\subsection{Choix techniques}
+
+% Instructions : justifier les choix
+Expliquer pourquoi certaines technologies, composants ou méthodes ont été retenues plutôt que d'autres. Cela montre la réflexion derrière la conception et la maîtrise des concepts théoriques.
+
+
+% ---------------- Section 4 : Réalisation ----------------
+\section{Réalisation (5 pages)}
+
+% Instructions à l'étudiant :
+% - Décrire la mise en œuvre pratique du projet
+% - Expliquer l’assemblage, le câblage, la programmation
+% - Inclure photos ou captures d’écran si nécessaire
+% - Limite : environ 5 pages
+
+\subsection{Assemblage matériel}
+
+% Instructions : expliquer comment le système a été monté
+Décrire étape par étape le montage des composants électroniques et mécaniques. Inclure des photos ou schémas pour illustrer le câblage et l’emplacement des composants.  
+
+\subsection{Programmation et logiciels}
+
+% Instructions : expliquer la partie logicielle
+Présenter le code ou les programmes utilisés, les bibliothèques, l’IDE et les configurations et les organigrammes de fonctionnement. 
+
+\subsection{Problèmes rencontrés et solutions}
+
+% Instructions : encourager l'étudiant à documenter les difficultés
+Lister les principaux problèmes rencontrés lors de la réalisation et expliquer comment ils ont été résolus. Cela montre la capacité à analyser et corriger les erreurs pratiques.
+
+% ---------------- Section 5 : Expérimentation (Tests) ----------------
+\section{Expérimentation et tests (5 à 7 pages)}
+
+% Instructions à l'étudiant :
+% - Décrire les expériences et protocoles de test
+% - Présenter les résultats sous forme de tableaux et figures
+% - Analyser et commenter les résultats
+% - Limite : 5 à 7 pages
+
+\subsection{Description des tests}
+
+% Instructions : expliquer chaque test
+Décrire les différents tests réalisés pour valider le fonctionnement du système. Indiquer les conditions expérimentales et les paramètres mesurés.
+
+\subsection{Résultats expérimentaux}
+
+% Instructions : présenter les résultats
+Utiliser des tableaux et figures pour montrer les résultats. Les figures peuvent représenter des graphiques ou captures de mesure, et les tableaux synthétiser les données.
+
+\begin{table}[h]
+	\centering
+	\caption{Résultats expérimentaux}
+	\begin{tabular}{ccc}
+		\toprule
+		Test & Valeur mesurée & Erreur \\
+		\midrule
+		1 & 25.1 & 0.2 \\
+		2 & 24.8 & 0.3 \\
+		3 & 25.0 & 0.1 \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:Résultats}
+\end{table}
+
+\subsection{Analyse et discussion}
+
+% Instructions : interpréter les résultats
+Comparer les résultats obtenus avec les objectifs du projet. Discuter des écarts éventuels, expliquer les causes et proposer des améliorations ou recommandations pour de futures expérimentations.
+% ---------------- Section 6 : Conclusion ----------------
+\section{Conclusion (1 page maximum)}
+
+% Instructions à l'étudiant :
+% - Résumer les principaux résultats et contributions
+% - Souligner les limites et perspectives d’amélioration
+% - La section doit être concise (1 page max)
+% Exemple :
+Le projet a permis de réaliser un système fonctionnel répondant aux objectifs initiaux. Les perspectives futures incluent [préciser les améliorations possibles].
+
+
+% La suite contient des exemple LATEX, vous pouvez les supprimer
+\newpage
+\section*{Exemples \LaTeX}
+
+\subsection*{Figures}
+
+Pour citer une figure dans le texte, utilisez la commande \verb|\ref{fig:label}|, où \texttt{label} est l'identifiant unique associé à la figure. Par exemple, la figure~\ref{fig:Figexemple1} illustre l'architecture globale du système.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{image1}
+	\caption{Architecture du système}
+	\label{fig:Figexemple1}
+\end{figure}
+
+Il est également possible de présenter plusieurs figures côte à côte pour comparer différents composants ou étapes du système. Par exemple :
+
+\begin{figure}[h]
+	\centering
+	
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{image1}
+		\caption{Capteur}
+		\label{fig:capteur}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{image1}
+		\caption{Carte ESP32}
+		\label{fig:esp32}
+	\end{subfigure}
+	
+	\caption{Composants principaux du système}
+	\label{fig:composants}
+\end{figure}
+
+Ces figures permettent de visualiser clairement les éléments essentiels et facilitent la compréhension du lecteur.
+
+\subsection*{Citations}
+
+Pour citer une référence bibliographique dans le texte, utilisez la commande \verb|\cite{clé}|, où \texttt{clé} correspond à l'entrée dans le fichier \texttt{bibliographie.bib}.  
+
+Par exemple, la référence \cite{floyd2007electronics} fournit des informations détaillées sur les principes de l'électronique appliquée aux systèmes embarqués.
+
+\subsection*{Tableaux}
+
+Pour créer facilement des tableaux en \LaTeX, il est recommandé d'utiliser un générateur en ligne tel que \url{https://www.tablesgenerator.com}, qui permet de concevoir des tableaux et de récupérer le code LaTeX correspondant.
+
+\begin{table}[h]
+	\centering
+	\caption{Résultats expérimentaux}
+	\begin{tabular}{ccc}
+		\toprule
+		Test & Valeur mesurée & Erreur \\
+		\midrule
+		1 & 25.1 & 0.2 \\
+		2 & 24.8 & 0.3 \\
+		3 & 25.0 & 0.1 \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:Résultats}
+\end{table}
+
+Ces tableaux permettent de synthétiser les données expérimentales et de faciliter l'analyse des résultats.
+
+\subsection*{Équations}
+
+Les équations peuvent être insérées en utilisant l'environnement \verb|equation| pour les numérotées ou \verb|align| pour des systèmes d'équations alignées. Par exemple, l'équation suivante décrit une relation simple entre la tension et le courant :  
+
+\begin{equation}
+	V = R \cdot I
+	\label{eq:ohm}
+\end{equation}
+
+Où $V$ est la tension (en volts), $R$ la résistance (en ohms) et $I$ le courant (en ampères). Les équations peuvent ensuite être référencées dans le texte avec \verb|\ref{eq:ohm}|, comme dans : « L'équation~\ref{eq:ohm} illustre la loi d'Ohm. »  
+
+Pour des systèmes plus complexes, l'environnement \verb|align| permet d'aligner plusieurs équations :
+
+\begin{align}
+	V_1 &= R_1 I_1 \\
+	V_2 &= R_2 I_2
+\end{align}

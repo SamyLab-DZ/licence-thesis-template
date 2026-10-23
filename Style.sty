@@ -1,0 +1,100 @@
+% LANGUE
+\usepackage[french]{babel}
+
+% POLICE Times New Roman avec LuaLaTeX
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+% MARGES
+\usepackage{geometry}
+\geometry{top=2cm,bottom=2cm,left=2cm,right=2cm}
+
+\usepackage{float}
+
+% FIGURES ET TABLEAUX
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{subcaption}
+\usepackage{booktabs}
+
+
+% MATH
+\usepackage{amsmath}
+
+% LIENS
+\usepackage[hidelinks]{hyperref}
+
+% TITRES
+\usepackage{titlesec}
+\titleformat{\section}{\bfseries\fontsize{14}{15}\selectfont}{\thesection}{1em}{}
+\titleformat{\subsection}{\bfseries\fontsize{12}{14}\selectfont}{\thesubsection}{1em}{}
+
+\usepackage{eso-pic}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage[backend=biber,style=numeric,sorting=nyt]{biblatex}
+\addbibresource{bibliographie.bib} % Lien avec le fichier .bib
+
+% NUMERO PAGE
+\pagestyle{plain}
+
+
+% ----- DéFINITION DES COMMANDES DE LA PAGE DE GARDE -----
+\newcommand{\specialite}[1]{\newcommand{\Spc}{#1}}
+\newcommand{\theme}[1]{\newcommand{\Thm}{#1}}
+\newcommand{\etudiant}[1]{\newcommand{\Nme}{#1}}
+\newcommand{\etudiantd}[1]{\newcommand{\Nmed}{#1}}
+\newcommand{\promoteur}[1]{\newcommand{\Nmp}{#1}}
+\newcommand{\copromoteur}[1]{\newcommand{\Nmcp}{#1}}
+\newcommand{\annee}[1]{\newcommand{\Ann}{#1}}
+
+
+% ----- TABLE DES MATIéRES -----
+
+\newcommand{\MyTableOfContents}{%
+	\clearpage
+	\pagenumbering{Roman}
+	
+	\phantomsection
+	\pdfbookmark[0]{Sommaire}{toc}
+	
+	\setcounter{tocdepth}{2}
+	
+	\begin{center}
+		{\Large \bfseries Table des matières}
+	\end{center}
+	
+	\vspace{1cm}
+	
+	\tableofcontents
+	
+	\newpage
+	\pagenumbering{arabic}
+}
+
+
+\newcommand{\MyBibliography}{%
+	\clearpage
+	
+	% --- Pagination B1, B2 ...
+	\pagenumbering{arabic} % A partir de B1
+	\renewcommand{\thepage}{B\arabic{page}}
+	\setcounter{page}{1}
+	
+	% --- Ajouter à Table des matières
+	
+	\phantomsection
+	\addcontentsline{toc}{section}{Références}
+	\pdfbookmark[0]{Références}{bibliography}
+	
+	% --- Titre
+	\begin{center}
+		{\LARGE \bfseries Références}
+	\end{center}
+	\vspace{1cm}
+	
+	% --- Bibliographie
+	\printbibliography
+	
+	\newpage
+}
